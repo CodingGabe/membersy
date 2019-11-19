@@ -15,10 +15,12 @@
 
 header {
     grid-area: header;
+    box-shadow: 0 2px 40px rgba(0,0,0,.17);
     .container {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+        align-items: center;
     }
 }
 main {
@@ -52,7 +54,7 @@ footer {
         "header"
         "main"
         "footer";
-    grid-template-rows: 70px auto 200px;
+    grid-template-rows: 95px auto 200px;
 }
 
 .container {

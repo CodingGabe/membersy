@@ -1,9 +1,12 @@
 // Colors ----------
 $color_body: #58595B;
 $color_body--contrast: lighten($color_body, 20%);
+$color_white: #ffffff;
 
 // Typography ----------
-
 $font_body: Arial, Helvetica, sans-serif;
 $baseline: 1rem;
 $bold: 700;
+
+// Utility ----------
+$border_round: 5px;
