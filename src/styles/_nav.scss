@@ -1,0 +1,19 @@
+@import "tokens";
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+        color: $color_body;
+        text-decoration: none;
+        padding-right: 2.2rem;
+        padding-right: 2.2rem;
+        text-transform: lowercase;
+        font-weight: $bold;
+        transition: all .2s ease-in-out;
+        &:hover {
+            color: $color_body--contrast;
+        }
+    }
+}

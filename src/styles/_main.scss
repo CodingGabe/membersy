@@ -1,0 +1,64 @@
+@import "tokens";
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  
+    // override safari text-rendering algorithm:
+    -webkit-text-size-adjust: none;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+header {
+    grid-area: header;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+    font-size: .75rem;
+    background: #F1F4F8;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .footer_bar--wrapper {
+        display: flex;
+        justify-content: space-between;
+        .footer_bar {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+    }
+}
+.app {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 70px auto 200px;
+}
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+    @media (min-width: 480px) {
+        padding: $baseline * 2;
+    }
+}
