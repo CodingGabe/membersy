@@ -2,11 +2,9 @@ import React from "react"
 import Layout from "../components/Layout"
 
 const Main = () => (
-    <main>
-      <Layout>
-        <p>membersy</p>
-      </Layout>
-    </main>
+  <Layout>
+    <h1>membersy</h1>
+  </Layout>
 )
 
 export default Main;

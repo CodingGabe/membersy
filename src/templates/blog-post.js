@@ -7,7 +7,7 @@ import Footer from "../components/Footer"
 const blogPost = () => {
   const post = this.props.data.markdownRemark
   const siteTitle = this.props.data.site.siteMetadata.title
-  const { previous, next } = this.props.pageContext
+  // const { previous, next } = this.props.pageContext
 
   return (
     <div className="app">
@@ -15,7 +15,7 @@ const blogPost = () => {
         {/* if there is a description, add, if not then load in post excerpt */}
         <Helmet
           title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          description={post.excerpt}
         />
         <article>
           <h1>{post.frontmatter.title}</h1>
@@ -45,7 +45,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }

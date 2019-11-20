@@ -15,32 +15,32 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/blog`,
-    //     name: `blog`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/assets`,
-    //     name: `assets`,
-    //   },
-    // },
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // your WordPress source
-        baseUrl: `membersy.com`,
-        protocol: `https`,
-        // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
-        // does your site use the Advanced Custom Fields Plugin?
-        useACF: false
-      }
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     // your WordPress source
+    //     baseUrl: `membersy.com`,
+    //     protocol: `https`,
+    //     // is it hosted on wordpress.com, or self-hosted?
+    //     hostingWPCOM: false,
+    //     // does your site use the Advanced Custom Fields Plugin?
+    //     useACF: false
+    //   }
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
