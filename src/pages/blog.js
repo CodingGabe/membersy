@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import Layout from "../components/Layout"
 import Helmet from "react-helmet"
 
@@ -11,8 +13,9 @@ class Blog extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Layout>
+      <div className="app">
+        <Header />
+        <Layout location={this.props.location} title={siteTitle}>
           <Helmet title="all posts" />
           <p>membersy</p>
           <h4>Posts</h4>
@@ -32,7 +35,8 @@ class Blog extends React.Component {
             <button className="membersy_btn">Go Home</button>
           </Link>
         </Layout>
-      </Layout>
+        <Footer />
+      </div>
     )
   }
 }

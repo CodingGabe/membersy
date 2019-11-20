@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <div className="app" title={siteTitle}>
       <SEO
-        title="membersy | Home"
+        title="Home"
         keywords={[`blog`, `gatsby`, `javascript`, `react`, `dental`]}
       />
       <Header />

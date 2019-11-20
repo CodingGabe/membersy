@@ -1,35 +1,38 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
+import Header from "../components/Header"
 import Layout from "../components/Layout"
 import Footer from "../components/Footer"
 
-const blogPost = () => {
-  const post = this.props.data.markdownRemark
-  const siteTitle = this.props.data.site.siteMetadata.title
-  // const { previous, next } = this.props.pageContext
+class blogPost extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    const siteTitle = this.props.data.site.siteMetadata.title
+    // const { previous, next } = this.props.pageContext
 
-  return (
-    <div className="app">
-      <Layout location={this.props.location} title={siteTitle}>
-        {/* if there is a description, add, if not then load in post excerpt */}
-        <Helmet
-          title={post.frontmatter.title}
-          description={post.excerpt}
-        />
-        <article>
-          <h1>{post.frontmatter.title}</h1>
-          <small>{post.frontmatter.date}</small>
-          <section
-            className="post-content"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </article>
-      </Layout>
-      <Footer />
-    </div>
-  )
+    return (
+      <div className="app">
+        <Header />
+        <Layout location={this.props.location} title={siteTitle}>
+          {/* if there is a description, add, if not then load in post excerpt */}
+          <Helmet title={post.frontmatter.title} description={post.excerpt} />
+          <article>
+            <h1>{post.frontmatter.title}</h1>
+            <small>{post.frontmatter.date}</small>
+            <section
+              className="post-content"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </article>
+        </Layout>
+        <Footer />
+      </div>
+    )
+  }
 }
+
+export default blogPost
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -49,5 +52,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default blogPost
