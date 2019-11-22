@@ -54,13 +54,36 @@ footer {
         "header"
         "main"
         "footer";
-    grid-template-rows: 95px auto 200px;
+    grid-template-rows: 95px auto 300px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+@media (min-width: 800px) {
+    .membersy_grid--wrapper {
+        display: grid;
+        grid-gap: $gutter;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .membersy_grid--item {
+        grid-column: span 6;
+        justify-self: center;
+    }
 }
 
 .container {
-    max-width: 1216px;
+    max-width: 1016px;
     margin: 0 auto;
     @media (min-width: 480px) {
         padding: $baseline * 2;
     }
+}
+
+.background_gray {
+    background: $color_gray;
 }
