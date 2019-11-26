@@ -1,5 +1,15 @@
 @import "tokens";
 
+html {
+    font-size: 10px;
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+}
+
 body {
     font-size: $baseline;
     font-family: $font_body;
@@ -9,4 +19,12 @@ body {
 
 p {
     margin-bottom: 20px;
+}
+
+a {
+    color: $color_secondary;
+}
+
+.color_membersy {
+    color: $color_primary;
 }

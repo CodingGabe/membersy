@@ -28,7 +28,7 @@ main {
 }
 footer {
     grid-area: footer;
-    font-size: .75rem;
+    font-size: 1.2rem;
     background: #F1F4F8;
     .container {
         display: flex;
@@ -61,6 +61,18 @@ section {
     padding: 80px 0;
 }
 
+.mac_box--wrapper {
+    display: flex;
+    margin: 40px 0;
+    background-color: $color_white;
+    padding: $baseline * 2;
+    border-radius: 5px;
+    box-shadow: 0 3px 24px rgba(0,0,0,.17);
+    img {
+        margin-right: 40px;
+    }
+}
+
 @media (min-width: 800px) {
     .membersy_grid--wrapper {
         display: grid;
@@ -74,6 +86,30 @@ section {
         grid-column: span 6;
         justify-self: center;
     }
+    .membersy_grid--item-3 {
+        grid-column: span 4;
+    }
+}
+
+.membersy_card {
+    position: relative;
+    padding: $baseline * 2;
+    border-radius: 5px;
+    box-shadow: 0 3px 24px rgba(0,0,0,.17);
+    .number_badge {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_primary;
+        color: $color_white;
+        padding: 10px;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .container {
@@ -86,4 +122,13 @@ section {
 
 .background_gray {
     background: $color_gray;
+}
+
+.membersy_badge {
+    display: inline-block;
+    background-color: #E0EEEF;
+    color: $color_secondary;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    border-radius: 25px;
 }

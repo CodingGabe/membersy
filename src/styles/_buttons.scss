@@ -1,15 +1,22 @@
 @import "tokens";
 
+.btn_wrapper {
+    margin-top: 30px;
+}
+
 .membersy_btn,
 .membersy_btn--primary,
 .membersy_btn--secondary {
     display: inline-block;
-    padding: .5rem;
+    padding: 1rem 2rem;
     color: $color_white;
     border-radius: $border_round;
     border: none;
-    margin-top: 20px;
     transition: all .2s ease-in-out;
+    color: $color_white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: $bold;
     &:hover {
         color: $color_white;
         box-shadow: 0 2px 20px rgba(0,0,0,.27);
