@@ -85,11 +85,16 @@ section {
     .membersy_grid--item {
         grid-column: span 6;
         justify-self: center;
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
     }
     .membersy_grid--item-3 {
         grid-column: span 4;
     }
 }
+
 
 .membersy_card {
     position: relative;

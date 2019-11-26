@@ -137,7 +137,8 @@ const Approach = () => (
   </section>
 )
 
-const Software = ({ data }) => (
+const Software = () => (
+  
   <section className="software background_gray">
     <div className="container">
       <div className="membersy_grid--wrapper">
@@ -157,22 +158,19 @@ const Software = ({ data }) => (
           <button className="membersy_btn u_spacing--top-small">learn more</button>
         </div>
         <div className="membersy_grid--item">
-          {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-          <img src="https://via.placeholder.com/250x200" alt="placeholder" />
+          <img src="https://gdurl.com/npry" alt="dash components" />
         </div>
       </div>
     </div>
   </section>
 )
 
-export const query = graphql`
+const data = graphql`
   query {
-    file(relativePath: { eq: "/dash-components.jpg" }) {
+    dash: file(relativePath: { eq: "dash-components.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
