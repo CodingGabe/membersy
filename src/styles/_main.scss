@@ -83,6 +83,7 @@ section {
     }
     
     .membersy_grid--item {
+        position: relative;
         grid-column: span 6;
         // justify-self: center;
     }

@@ -18,8 +18,10 @@
     font-size: 16px;
     font-weight: $bold;
     &:hover {
+        cursor: pointer;
         color: $color_white;
         box-shadow: 0 2px 20px rgba(0,0,0,.27);
+        transform: translateY(-3px);
     }
     a {
         color: $color_white;

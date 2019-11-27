@@ -156,10 +156,11 @@ const Software = () => {
       <div className="container">
         <div className="membersy_grid--wrapper">
           <div className="membersy_grid--item">
-          <Img 
+          <img src="https://gdurl.com/f_1x" alt="dashboard-mockup" className="img_fluid img_absolute" />
+          {/* <Img 
               fluid={data.image.childImageSharp.fluid}
               alt="dashboard mockup"
-            />
+            /> */}
           </div>
           <div className="membersy_grid--item u_align--center">
             
