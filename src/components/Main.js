@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 class Main extends React.Component {
@@ -137,44 +137,54 @@ const Approach = () => (
   </section>
 )
 
-const Software = () => (
-  
-  <section className="software background_gray">
-    <div className="container">
-      <div className="membersy_grid--wrapper">
-        <div className="membersy_grid--item">
-          <p className="membersy_badge">dental membership software</p>
-          <h2 className="membersy_subheading">power your membership program with cutting-edge software.</h2>
-          <p>
-            Bring your community together with a simple, intuitive membership
-            dashboard that automates your member workflow and scales as your
-            member base grows.
-          </p>
-          <p>
-            Our robust membership software features an online dashboard that
-            displays real-time KPI's vital to the health of your membership
-            programs.
-          </p>
-          <button className="membersy_btn u_spacing--top-small">learn more</button>
-        </div>
-        <div className="membersy_grid--item">
-          <img src="https://gdurl.com/npry" alt="dash components" />
-        </div>
-      </div>
-    </div>
-  </section>
-)
-
-const data = graphql`
-  query {
-    dash: file(relativePath: { eq: "dash-components.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+const Software = () => {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "dash-mockup.png" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
-  }
-`
+  `)
+
+  return (
+    <section className="software background_gray">
+      <div className="container">
+        <div className="membersy_grid--wrapper">
+          <div className="membersy_grid--item">
+          <Img 
+              fluid={data.image.childImageSharp.fluid}
+              alt="dashboard mockup"
+            />
+          </div>
+          <div className="membersy_grid--item u_align--center">
+            
+            <p className="membersy_badge">dental membership software</p>
+            <h2 className="membersy_subheading">
+              power your membership program with cutting-edge software.
+            </h2>
+            <p>
+              Bring your community together with a simple, intuitive membership
+              dashboard that automates your member workflow and scales as your
+              member base grows.
+            </p>
+            <p>
+              Our robust membership software features an online dashboard that
+              displays real-time KPI's vital to the health of your membership
+              programs.
+            </p>
+            <button className="membersy_btn u_spacing--top-small">
+              learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default Main
