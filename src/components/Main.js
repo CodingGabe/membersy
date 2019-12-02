@@ -37,10 +37,6 @@ const Hero = () => (
             </button>
           </div>
         </div>
-
-        <div className="membersy_grid--item">
-          <img src="https://via.placeholder.com/150" alt="placeholder" />
-        </div>
       </div>
     </div>
   </section>

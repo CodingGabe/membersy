@@ -17,6 +17,8 @@
 }
 
 .u_align--center {
+    display: grid;
+    align-self: center;
     justify-self: center;
 }
 .u_space-between {
