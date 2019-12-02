@@ -207,20 +207,20 @@ const Support = () => (
             </div>
             <div className="support_card">
               <div className="support_card--desc">
-                <h2>member support</h2>
-                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+                <h2>member outreach</h2>
+                <p>Our dedicated support specialists will proactively engage your members throughout their membership lifecycle.</p>
               </div>
             </div>
             <div className="support_card">
               <div className="support_card--desc">
-                <h2>member support</h2>
-                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+                <h2>office support</h2>
+                <p>We'll assign a dedicated provider specialist t each of you practices who will provide real-time membership plan support to your staff.</p>
               </div>
             </div>
             <div className="support_card">
               <div className="support_card--desc">
-                <h2>member support</h2>
-                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+                <h2>office outreach</h2>
+                <p>Your practices will enjoy hearing from their dedicated provider support specialists each month.</p>
               </div>
             </div>
           </div>

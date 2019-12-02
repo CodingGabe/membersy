@@ -30,15 +30,25 @@ footer {
     grid-area: footer;
     font-size: 1.2rem;
     background: #F1F4F8;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
+    small {
+        display: inline-block;
     }
-
+    p, small {
+        color: $color_body--contrast;
+    }
+    img {
+        max-width: 125px;
+    }
+    hr {
+        height: 1px;
+        color: $color_body--contrast;
+        background-color: $color_body--contrast;
+        border: none;
+    }
     .footer_bar--wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        margin-top: 40px;
         .footer_bar {
             display: flex;
             flex-direction: column;
@@ -54,7 +64,7 @@ footer {
         "header"
         "main"
         "footer";
-    grid-template-rows: 95px auto 300px;
+    grid-template-rows: 95px auto 350px;
 }
 
 section {

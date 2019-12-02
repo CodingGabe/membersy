@@ -19,6 +19,10 @@
 .u_align--center {
     justify-self: center;
 }
+.u_space-between {
+    display: flex;
+    justify-content: space-between;
+}
 
 .img_absolute {
     position: absolute;
