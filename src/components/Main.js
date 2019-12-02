@@ -11,6 +11,7 @@ class Main extends React.Component {
         <Experience />
         <Approach />
         <Software />
+        <Support />
       </main>
     )
   }
@@ -187,5 +188,46 @@ const Software = () => {
     </section>
   )
 }
+
+const Support = () => (
+  <section className="support">
+    <div className="container">
+      <div className="membersy_grid--wrapper">
+        <div className="membersy_grid--item">
+          <p className="membersy_badge">membersy support</p>
+          <h2 className="membersy_subheading">
+              <span className="color_membersy">membersy</span> is your partner in membership success.
+          </h2>
+          <div className="support_card--wrapper">
+            <div className="support_card">
+              <div className="support_card--desc">
+                <h2>member support</h2>
+                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+              </div>
+            </div>
+            <div className="support_card">
+              <div className="support_card--desc">
+                <h2>member support</h2>
+                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+              </div>
+            </div>
+            <div className="support_card">
+              <div className="support_card--desc">
+                <h2>member support</h2>
+                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+              </div>
+            </div>
+            <div className="support_card">
+              <div className="support_card--desc">
+                <h2>member support</h2>
+                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)
 
 export default Main
