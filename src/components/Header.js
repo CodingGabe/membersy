@@ -3,6 +3,7 @@ import Link from "gatsby-link"
 import "../styles/index.scss"
 import Layout from "./Layout"
 import Helmet from "react-helmet"
+import Logos from '../logos/logo-primary.svg'
 
 const Header = () => (
   <header>
@@ -38,7 +39,7 @@ const Header = () => (
     </Helmet>
     <Layout>
       <Link to="/" className="nav_link">
-        home
+        <img src={Logos} alt="Membersy Logo" width="185px" />
       </Link>
       <nav>
         <Link to="/about/" className="nav_link">
