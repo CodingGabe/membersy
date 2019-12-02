@@ -3,6 +3,15 @@
 html {
     font-size: 10px;
 }
+@font-face {
+    font-family: avenirBook;
+    src: url('../fonts/Avenir-Book.ttf');
+}
+
+@font-face {
+    font-family: avenirRoman;
+    src: url('../fonts/Avenir-Roman.ttf');
+}
 
 @media (min-width: 800px) {
     html {
@@ -15,6 +24,9 @@ body {
     font-family: $font_body;
     color: $color_body;
     line-height: 1.4;
+    h1,h2,h3,h4 {
+        font-family: $font_heading;
+    }
 }
 
 p {
