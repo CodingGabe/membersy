@@ -61,14 +61,45 @@ footer {
         .footer_bar {
             display: flex;
             flex-direction: column;
-            margin-right: 30px;
-            margin-left: 30px;
+            margin-right: 40px;
+            margin-left: 40px;
             p {
                 margin-bottom: 10px;
+            }
+            form {
+                display: flex;
+                flex-direction: row;
+            }
+            input {
+                border: none;
+                background: transparent;
+                border-bottom: 2px solid $color_secondary;
+                padding: .5rem;
+                margin-right: 1rem;
+            }
+            input::placeholder {
+                opacity: .5;
+            }
+            button {
+                display: inline-flex;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background: #55efc4;
+                border: none;
+                font-size: 2rem;
+                transition: all .6s ease-in-out;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    cursor: pointer;
+                    transform: rotate(360deg);
+                }
             }
         }
     }
 }
+
 .app {
     display: grid;
     height: 100vh;

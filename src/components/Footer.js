@@ -3,6 +3,7 @@ import Logos from '../logos/logo-primary.svg'
 import Link from "gatsby-link"
 
 const Footer = () => {
+
   // anytime a someone wants to add a social media icon
   // this is best practice for max seo
 
@@ -18,6 +19,13 @@ const Footer = () => {
       {icon}
       </a>
   )
+
+  
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log('Submitted!')
+  }
+
   return (
     <footer>
       <div className="container">
@@ -69,6 +77,13 @@ const Footer = () => {
             <p style={{ marginBottom: 2 }}>mon-fri - 8am-6pm cst</p>
             <p style={{ marginBottom: 2 }}>512.842.9296</p>
             <Link to="mailto:hello@membersy.com">hello@membersy.com</Link>
+          </div>
+          <div className="footer_bar">
+            <p><strong>stay in touch!</strong></p>
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="email" placeholder="email address" />
+              <button type="submit" className="email_btn"><span class="iconify" data-icon="bx:bx-right-arrow-alt" data-inline="false"></span></button>
+            </form>
           </div>
         </div>
         <hr />
