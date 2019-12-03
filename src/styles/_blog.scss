@@ -1,0 +1,43 @@
+@import "tokens";
+
+.blog_wrapper {
+    h1,h2,h3,h4 {
+        font-family: $font_heading;
+    }
+    a {
+        text-decoration: none;
+    }
+    .blog_hero--container {
+        max-width: 600px;
+    }
+    .container {
+        margin-top: -6rem;
+        padding-bottom: 6rem;
+    }
+    .blog_hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $color_white;
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../../content/assets/blog-hero.jpg') no-repeat center;
+        background-size: cover;
+        height: 450px;
+        .membersy_heading {
+            font-size: 6rem;
+            line-height: 1;
+        }
+        h3 {
+            font-size: 2.75rem;
+            color: $color_white--contrast;
+        }
+    }
+    .blog_card {
+        background: $color_white;
+        border-radius: 5px;
+        box-shadow: 0 1.5rem 4rem rgba(22,28,45,.05);
+        padding: 3rem;
+        margin-bottom: 3rem;
+    }
+}

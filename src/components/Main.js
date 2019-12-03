@@ -159,7 +159,7 @@ const Software = () => {
               alt="dashboard mockup"
             /> */}
           </div>
-          <div className="membersy_grid--item u_align--center">
+          <div className="membersy_grid--item">
             
             <p className="membersy_badge">dental membership software</p>
             <h2 className="membersy_subheading">

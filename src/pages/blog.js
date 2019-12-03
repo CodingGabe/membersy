@@ -15,26 +15,32 @@ class Blog extends React.Component {
     return (
       <div className="app">
         <Header />
-        <Layout location={this.props.location} title={siteTitle}>
-          <Helmet title="all posts" />
-          <p>membersy</p>
-          <h4>Posts</h4>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.id}>
-                <h3>
-                  <Link to={`blog${node.fields.slug}`}>{title}</Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p>{node.excerpt}</p>
-              </div>
-            )
-          })}
-          <Link to="/">
-            <button className="membersy_btn">Go Home</button>
-          </Link>
-        </Layout>
+        <article className="blog_wrapper">
+          <section className="blog_hero">
+            <div className="blog_hero--container">
+              <h1 className="membersy_heading">Welcome to the membersy blog!</h1>
+              <h3>Health tips, life tools, community talk</h3>
+            </div>
+          </section>
+          <Helmet title="Blog" />
+          <section className="container">
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <div key={node.id} className="blog_card">
+                  <h3>
+                    <Link to={`blog${node.fields.slug}`}>{title}</Link>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                  <p>{node.excerpt}</p>
+                </div>
+              )
+            })}
+            <Link to="/">
+              <button className="membersy_btn">Go Home</button>
+            </Link>
+          </section>
+        </article>
         <Footer />
       </div>
     )

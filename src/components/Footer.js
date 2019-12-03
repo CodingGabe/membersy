@@ -33,6 +33,11 @@ const Footer = () => {
           <img src={Logos} alt="Logo Primary" />
           <p style={{ marginBottom: 10 }}>treating patients like members not numbers</p>
           {renderFooterIcon(
+            'LinkedIn',
+            'https://www.linkedin.com/company/membersy/',
+            <span class="iconify" data-icon="uil:linkedin-alt" data-inline="false"></span>
+          )}
+          {renderFooterIcon(
             'Twitter',
             'https://twitter.com/membersydental',
             <span class="iconify" data-icon="uil:twitter-alt" data-inline="false"></span>

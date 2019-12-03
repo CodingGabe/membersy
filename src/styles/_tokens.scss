@@ -4,6 +4,7 @@ $color_secondary: #006F90;
 $color_body: #58595B;
 $color_body--contrast: lighten($color_body, 20%);
 $color_white: #ffffff;
+$color_white--contrast: darken($color_white, 15%);
 $color_gray: #F1F4F8;
 
 // Typography ----------
