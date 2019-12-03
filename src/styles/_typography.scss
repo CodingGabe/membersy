@@ -52,3 +52,14 @@ a {
     line-height: 1.2;
     margin-bottom: 4rem;
 }
+
+.footer__icon svg {
+    color: $color_body;
+    font-size: 2rem;
+    &:hover {
+        color: $color_body--contrast;
+    }
+}
+.footer__icon:not(:last-child) {
+    margin-right: 10px;
+}

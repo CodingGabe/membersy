@@ -36,6 +36,7 @@ const Header = () => (
         property="twitter:description"
         content="membersy | a membership experience"
       />
+      <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
     </Helmet>
     <Layout>
       <Link to="/" className="nav_link">

@@ -33,6 +33,13 @@ footer {
     small {
         display: inline-block;
     }
+    a {
+        color: $color_body--contrast;
+        text-decoration: none;
+        &:hover {
+            color: $color_body;
+        }
+    }
     p, small {
         color: $color_body--contrast;
     }
@@ -40,9 +47,11 @@ footer {
         max-width: 125px;
     }
     hr {
+        margin-top: 20px;
         height: 1px;
         color: $color_body--contrast;
         background-color: $color_body--contrast;
+        opacity: .4;
         border: none;
     }
     .footer_bar--wrapper {
@@ -54,6 +63,9 @@ footer {
             flex-direction: column;
             margin-right: 30px;
             margin-left: 30px;
+            p {
+                margin-bottom: 10px;
+            }
         }
     }
 }
@@ -64,7 +76,7 @@ footer {
         "header"
         "main"
         "footer";
-    grid-template-rows: 95px auto 350px;
+    grid-template-rows: 95px auto auto;
 }
 
 section {

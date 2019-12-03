@@ -1,47 +1,74 @@
 import React from "react"
 import Logos from '../logos/logo-primary.svg'
+import Link from "gatsby-link"
 
 const Footer = () => {
   // anytime a someone wants to add a social media icon
   // this is best practice for max seo
 
-  // const renderFooterIcon = (title, link, icon) => (
-  //     <a
-  //         aria-label={title}
-  //         className="footer__link"
-  //         href={link}
-  //         rel="noopener noreferrer"
-  //         target="_blank"
-  //         title={title}
-  //     >
-  //     {icon}
-  //     </a>
-  // )
+  const renderFooterIcon = (title, link, icon) => (
+      <a
+          aria-label={title}
+          className="footer__icon"
+          href={link}
+          rel="noopener noreferrer"
+          target="_blank"
+          title={title}
+      >
+      {icon}
+      </a>
+  )
   return (
     <footer>
       <div className="container">
         <div className="u_text--center">
           <img src={Logos} alt="Logo Primary" />
-          <p>treating patients like members not numbers</p>
+          <p style={{ marginBottom: 10 }}>treating patients like members not numbers</p>
+          {renderFooterIcon(
+            'Twitter',
+            'https://twitter.com/membersydental',
+            <span class="iconify" data-icon="uil:twitter-alt" data-inline="false"></span>
+          )}
+          {renderFooterIcon(
+            'Instagram',
+            'https://www.instagram.com/membersy.dental/',
+            <span class="iconify" data-icon="mdi:instagram" data-inline="false"></span>
+          )}
+          {renderFooterIcon(
+            'Facebook',
+            'https://www.facebook.com/membersy/',
+            <span class="iconify" data-icon="feather:facebook" data-inline="false"></span>
+          )}
         </div>
         <div className="footer_bar--wrapper">
           <div className="footer_bar">
             <p>
               <strong>solutions</strong>
             </p>
-            <p>consulting</p>
+            <Link to="/consulting">consulting</Link>
+            <Link to="/software">software</Link>
+            <Link to="/ecommerce">ecommerce</Link>
+            <Link to="/marketing">marketing</Link>
+            <Link to="/fulfillment">fulfillment</Link>
+            <Link to="/billing">billing</Link>
+            <Link to="/support">support</Link>
+            <Link to="/compliance">compliance</Link>
           </div>
           <div className="footer_bar">
             <p>
               <strong>company</strong>
             </p>
-            <p>about</p>
+            <Link to="/about">about</Link>
+            <Link to="/careers">careers</Link>
+            <Link to="/contact us">contact us</Link>
           </div>
           <div className="footer_bar">
             <p>
               <strong>contact info</strong>
             </p>
-            <p>mon-fri - 8am-6pm cst</p>
+            <p style={{ marginBottom: 2 }}>mon-fri - 8am-6pm cst</p>
+            <p style={{ marginBottom: 2 }}>512.842.9296</p>
+            <Link to="mailto:hello@membersy.com">hello@membersy.com</Link>
           </div>
         </div>
         <hr />
@@ -65,7 +92,7 @@ const Footer = () => {
         </small>
         <div className="u_space-between">
           <small>2019 | membersy llc | all rights reserved</small>
-          <small>made with heart in Austin, Texas</small>
+          <small>made with <span role="img" aria-label="heart icon" class="iconify" data-icon="emojione:heart-suit" data-inline="false"></span> in Austin, Texas</small>
         </div>
       </div>
     </footer>
