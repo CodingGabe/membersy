@@ -1,7 +1,7 @@
 ---
 path: membersy 2.0
 date: 2019-11-20T22:23:42.895Z
-thumbnail: /assets/profile-pic.jpg
+thumbnail: /assets/new-membersy.jpg
 title: 'Welcome to the new, fresh, membersy'
 description: membersy 2.0 launches built for speed
 ---
