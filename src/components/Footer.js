@@ -86,7 +86,7 @@ const Footer = () => {
           <div className="footer_bar">
             <p><strong>stay in touch!</strong></p>
             <form onSubmit={handleSubmit}>
-              <input type="text" name="email" placeholder="email address" />
+              <input title="email address" type="text" name="email" placeholder="email address" />
               <button type="submit" className="email_btn"><span class="iconify" data-icon="bx:bx-right-arrow-alt" data-inline="false"></span></button>
             </form>
           </div>
