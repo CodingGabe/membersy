@@ -27,15 +27,15 @@ class Blog extends React.Component {
               return (
                 <div key={node.id} className="blog_card">
                   <div className="membersy_grid--wrapper">
-                    <div className="membersy_grid--item">
+                    <div className="membersy_grid--item blog_desc">
                       <h3>
                         <Link to={`blog${node.fields.slug}`}>{title}</Link>
                       </h3>
                       <p>{node.excerpt}</p>
                       <small>{node.frontmatter.date}</small>
                     </div>
-                    <div className="membersy_grid--item">
-                      {/* <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} /> */}
+                    <div className="membersy_grid--item blog_img">
+                      <img src={node.frontmatter.thumbnail} alt="featured image" />
                     </div>
                   </div>
                 </div>
@@ -72,6 +72,7 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             description
+            thumbnail
           }
         }
       }

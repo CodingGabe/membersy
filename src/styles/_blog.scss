@@ -37,7 +37,15 @@
         background: $color_white;
         border-radius: 5px;
         box-shadow: 0 1.5rem 4rem rgba(22,28,45,.05);
-        padding: 3rem;
         margin-bottom: 3rem;
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+            border-radius: 0 5px 5px 0;
+        }
+        .blog_desc {
+            padding: 6rem 3rem;
+        }
     }
 }
