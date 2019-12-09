@@ -17,9 +17,12 @@ class blogPost extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           {/* if there is a description, add, if not then load in post excerpt */}
           <Helmet title={post.frontmatter.title} description={post.excerpt} />
-          <article>
-            <h1>{post.frontmatter.title}</h1>
-            <small>{post.frontmatter.date}</small>
+          <article className="blog_post--wrapper">
+            <div className="blog_post--title">
+              <h1>{post.frontmatter.title}</h1>
+              <small>{post.frontmatter.date}</small>
+              <img src={post.frontmatter.thumbnail} alt="featured" />
+            </div>
             <section
               className="post-content"
               dangerouslySetInnerHTML={{ __html: post.html }}
@@ -48,6 +51,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
+        thumbnail
       }
     }
   }

@@ -26,6 +26,9 @@ class Blog extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               return (
                 <div key={node.id} className="blog_card">
+                  <span className="badge_pill">
+                    <p>Health Tips</p>
+                  </span>
                   <div className="membersy_grid--wrapper">
                     <div className="membersy_grid--item blog_desc">
                       <h3>
@@ -35,7 +38,7 @@ class Blog extends React.Component {
                       <small>{node.frontmatter.date}</small>
                     </div>
                     <div className="membersy_grid--item blog_img">
-                      <img src={node.frontmatter.thumbnail} alt="featured image" />
+                      <img src={node.frontmatter.thumbnail} alt="featured" />
                     </div>
                   </div>
                 </div>

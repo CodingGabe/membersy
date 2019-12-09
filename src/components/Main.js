@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import mac from "../../content/assets/support-mac.png"
 
 class Main extends React.Component {
   render() {
@@ -194,33 +195,44 @@ const Support = () => (
           <h2 className="membersy_subheading">
               <span className="color_membersy">membersy</span> is your partner in membership success.
           </h2>
+
           <div className="support_card--wrapper">
+
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>member support</h2>
                 <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
               </div>
             </div>
+
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>member outreach</h2>
                 <p>Our dedicated support specialists will proactively engage your members throughout their membership lifecycle.</p>
               </div>
             </div>
+
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>office support</h2>
                 <p>We'll assign a dedicated provider specialist t each of you practices who will provide real-time membership plan support to your staff.</p>
               </div>
             </div>
+
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>office outreach</h2>
                 <p>Your practices will enjoy hearing from their dedicated provider support specialists each month.</p>
               </div>
             </div>
+
           </div>
         </div>
+
+        <div className="membersy_grid--item">
+          <img src={mac} alt="support Macbook" />
+        </div>
+        
       </div>
     </div>
   </section>
