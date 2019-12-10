@@ -9,12 +9,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,22 +23,21 @@ module.exports = {
         name: `assets`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     // your WordPress source
-    //     baseUrl: `membersy.com`,
-    //     protocol: `https`,
-    //     // is it hosted on wordpress.com, or self-hosted?
-    //     hostingWPCOM: false,
-    //     // does your site use the Advanced Custom Fields Plugin?
-    //     useACF: false
-    //   }
-    // },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: 'assets'
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -64,6 +57,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-netlify-cms`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {

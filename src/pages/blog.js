@@ -38,7 +38,7 @@ class Blog extends React.Component {
                       <small>{node.frontmatter.date}</small>
                     </div>
                     <div className="membersy_grid--item blog_img">
-                      <img src={node.frontmatter.thumbnail} alt="featured" />
+                      <img src={node.frontmatter.thumbnail} />
                     </div>
                   </div>
                 </div>

@@ -25,6 +25,7 @@
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-remark-copy-linked-files": "^2.1.30",
     "gatsby-remark-images": "^3.1.32",
+    "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.27",
     "gatsby-remark-smartypants": "^2.1.16",
     "gatsby-source-filesystem": "^2.1.39",
@@ -35,7 +36,9 @@
     "node-sass": "^4.13.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
