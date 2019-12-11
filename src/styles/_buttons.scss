@@ -29,11 +29,11 @@
         font-size: 1.6rem;
         font-weight: $bold;
         @media(max-width: 600px) {
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
     }
     @media (max-width: 600px) {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 }
 
@@ -46,6 +46,10 @@
     background: $color_primary;
     margin-right: 20px;
     padding: 15px;
+    @media(max-width: 600px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
 }
 .membersy_btn--secondary {
     background: $color_secondary;

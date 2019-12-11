@@ -21,8 +21,8 @@ class Main extends React.Component {
 const Hero = () => (
   <section className="hero">
     <div className="container">
-      <div className="membersy_grid--wrapper">
-        <div className="membersy_grid--item">
+      <div className="membersy_grid">
+        <div className="membersy_grid--6">
           <h1 className="membersy_heading">membership dentistry has arrived</h1>
           <p>
             Today's consumers have come to expect a highly personal and
@@ -55,14 +55,14 @@ const Experience = () => (
       <div className="mac_box--wrapper">
         <img src="https://via.placeholder.com/100x100" alt="placeholder" />
         <div className="u_flex--text">
-        <h4>
-          welcome to <span className="color_membersy">membersy</span>
-        </h4>
-        <p>
-          Discover how our advanced membership solutions can help you launch and
-          grow your own proprietary, regulatory compliant and professionally
-          administered dental membership program.
-        </p>
+          <h4>
+            welcome to <span className="color_membersy">membersy</span>
+          </h4>
+          <p>
+            Discover how our advanced membership solutions can help you launch
+            and grow your own proprietary, regulatory compliant and
+            professionally administered dental membership program.
+          </p>
         </div>
       </div>
       <Link to="/">learn more about dental membership plans</Link>
@@ -154,14 +154,13 @@ const Software = () => {
       <div className="container">
         <div className="membersy_grid--wrapper">
           <div className="membersy_grid--item">
-            <Img 
+            <Img
               className="gatsby_image"
               fluid={data.image.childImageSharp.fluid}
               alt="dashboard mockup"
             />
           </div>
           <div className="membersy_grid--item">
-            
             <p className="membersy_badge">dental membership software</p>
             <h2 className="membersy_subheading">
               power your membership program with cutting-edge software.
@@ -193,46 +192,57 @@ const Support = () => (
         <div className="membersy_grid--item">
           <p className="membersy_badge">membersy support</p>
           <h2 className="membersy_subheading">
-              <span className="color_membersy">membersy</span> is your partner in membership success.
+            <span className="color_membersy">membersy</span> is your partner in
+            membership success.
           </h2>
 
           <div className="support_card--wrapper">
-
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>member support</h2>
-                <p>Our dedicated members support specialists will provide members with real-time phone support.</p>
+                <p>
+                  Our dedicated members support specialists will provide members
+                  with real-time phone support.
+                </p>
               </div>
             </div>
 
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>member outreach</h2>
-                <p>Our dedicated support specialists will proactively engage your members throughout their membership lifecycle.</p>
+                <p>
+                  Our dedicated support specialists will proactively engage your
+                  members throughout their membership lifecycle.
+                </p>
               </div>
             </div>
 
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>office support</h2>
-                <p>We'll assign a dedicated provider specialist t each of you practices who will provide real-time membership plan support to your staff.</p>
+                <p>
+                  We'll assign a dedicated provider specialist t each of you
+                  practices who will provide real-time membership plan support
+                  to your staff.
+                </p>
               </div>
             </div>
 
             <div className="support_card">
               <div className="support_card--desc">
                 <h2>office outreach</h2>
-                <p>Your practices will enjoy hearing from their dedicated provider support specialists each month.</p>
+                <p>
+                  Your practices will enjoy hearing from their dedicated
+                  provider support specialists each month.
+                </p>
               </div>
             </div>
-
           </div>
         </div>
 
         <div className="membersy_grid--item">
           <img src={mac} alt="support Macbook" />
         </div>
-        
       </div>
     </div>
   </section>
