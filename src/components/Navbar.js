@@ -24,7 +24,7 @@ const Navbar = props => {
     <>
       <NavBar style={barAnimation}>
           <Link to="/" className="nav_link">
-            <img src={Logos} alt="Membersy Logo" width="185px" />
+            <img src={Logos} alt="Membersy Logo" />
           </Link>
           <NavLinks style={linkAnimation}>
             <Link to="/about/" className="nav_link">

@@ -50,6 +50,7 @@ const CollapseWrapper = styled(animated.div)`
   top: 8.4rem;
   left: 0;
   right: 0;
+  z-index: 2;
 `;
 
 const NavLinks = styled.ul`
@@ -72,7 +73,8 @@ const NavLinks = styled.ul`
   }
   & a.membersy_btn {
     display: block;
-    max-width: 15rem;
+    width: 100%;
+    max-width: 20rem;
     text-align: center;
   }
 `;

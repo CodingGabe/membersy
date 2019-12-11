@@ -17,3 +17,13 @@ nav {
         }
     }
 }
+
+.nav_link {
+    img {
+        width: 100%;
+        max-width: 20rem;
+        @media (max-width: 60rem) {
+            max-width: 15rem;
+        }
+    }
+}
