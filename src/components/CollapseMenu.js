@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from "gatsby-link"
 
 import { useSpring, animated } from 'react-spring';
 
@@ -16,10 +17,24 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+        <Link to="/about/" className="nav_link">
+              about us
+            </Link>
+            <Link to="/solutions/" className="nav_link">
+              solutions
+            </Link>
+            <Link to="/portfolio/" className="nav_link">
+              portfolio
+            </Link>
+            <Link to="/blog/" className="nav_link">
+              blog
+            </Link>
+            <Link to="/login" className="nav_link">
+              login
+            </Link>
+            <Link to="/demo" className="membersy_btn">
+              request demo
+            </Link>
         </NavLinks>
       </CollapseWrapper>
     );
@@ -32,30 +47,32 @@ export default CollapseMenu;
 const CollapseWrapper = styled(animated.div)`
   background: #2d3436;
   position: fixed;
-  top: 4.5rem;
+  top: 8.4rem;
   left: 0;
   right: 0;
 `;
 
 const NavLinks = styled.ul`
   list-style-type: none;
-  padding: 2rem 1rem 2rem 2rem;
-
-  & li {
-    transition: all 300ms linear 0s;
-  }
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 
   & a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2;
     color: #dfe6e9;
-    text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    margin-bottom: 1rem;
 
     &:hover {
-      color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
+      color: #F1F4F8;
     }
+  }
+  & a.membersy_btn {
+    display: block;
+    max-width: 15rem;
+    text-align: center;
   }
 `;
