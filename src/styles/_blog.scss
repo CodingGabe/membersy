@@ -76,8 +76,14 @@
 
 // Blog Post Styles
 article.blog_post--wrapper {
+    p {
+        font-size: 1.5rem;
+    }
     max-width: 66.66667%;
-    margin: 3rem auto 0 auto;
+    margin: 12rem auto 0 auto;
+    @media(max-width: 60rem) {
+        max-width: 100%;
+    }
     section {
         padding-top: 3rem;
     }
